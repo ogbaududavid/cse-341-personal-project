@@ -5,7 +5,7 @@ const doc = {
         title: "Temples and Wards API",
         description: "An API service"
     },
-    host: 'https://temples-wards-api.onrender.com',
+    host: 'temples-wards-api.onrender.com',
     schemes: 'https'
 }
 
