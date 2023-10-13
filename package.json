@@ -8,10 +8,6 @@
     "start": "node app.js",
     "dev_start": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ogbaududavid/cse-341-personal-project.git"
-  },
   "author": "David Ogbaudu",
   "license": "ISC",
   "bugs": {
