@@ -9,6 +9,16 @@
   "basePath": "/",
   "schemes": "https",
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/temples/": {
       "get": {
         "description": "",
