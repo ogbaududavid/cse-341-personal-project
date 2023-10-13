@@ -2,8 +2,8 @@ const swaggerAutogen = require('swagger-autogen')()
 
 const doc = {
     info: {
-        title: "contacts API",
-        description: "An api that allows your retrive, post, and delete contacts from a server"
+        title: "Temples and Wards API",
+        description: "A Temples and Wards API"
     },
     host: 'https://temples-and-wards-api.onrender.com',
     schemes: 'https'
