@@ -66,3 +66,81 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:8080/wards/65298f5251277f290f7c23a9
+
+
+
+
+
+
+
+//TEMPLES DATABASE RENDER LINKS
+###
+GET https://temples-and-wards-api.onrender.com/temples/
+
+###
+POST https://temples-and-wards-api.onrender.com/temples/
+Content-Type: application/json
+
+ {
+    "templeName": "LOLOOhhh124",
+    "country": "KKD",
+    "state_region_province": "ADF",
+    "street": "OAD",
+    "announced": "AD",
+    "groundBreaking": "ADCEE",
+    "dedicated": "ADAE",
+    "telephone": "AEFED"
+  }
+
+####
+PUT https://temples-and-wards-api.onrender.com/temples/65298e7a51277f290f7c23a7
+Content-Type: application/json
+
+ {
+    "templeName": "i GOT IT",
+    "country": "KKD",
+    "state_region_province": "ADFFFFF",
+    "street": "OAD",
+    "announced": "AD",
+    "groundBreaking": "ADCEE",
+    "dedicated": "ADAE",
+    "telephone": "AEFED"
+  }
+
+
+###
+DELETE https://temples-and-wards-api.onrender.com/temples/65299597360ce9792c35d466
+
+
+
+
+
+//WARDS DATA BASE --RENDER LINKS
+###
+GET https://temples-and-wards-api.onrender.com/wards/
+
+####
+POST https://temples-and-wards-api.onrender.com/wards/
+Content-Type: application/json
+
+ {
+    "wardName": "Ajah",
+    "address": "Graceland Estate",
+   "bishopName": "Bishop Archibong",
+    "stake": "Zion"
+  }
+
+###
+PUT https://temples-and-wards-api.onrender.com/wards/65299623360ce9792c35d467
+Content-Type: application/json
+
+ {
+    "wardName": "AjahpUpdated",
+    "address": "Graceland Estate",
+   "bishopName": "Bishop Archibong",
+    "stake": "Zion"
+  }
+
+
+###
+DELETE https://temples-and-wards-api.onrender.com/wards/65298f5251277f290f7c23a9
