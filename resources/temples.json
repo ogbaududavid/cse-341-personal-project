@@ -1,0 +1,34 @@
+{
+    "temples" : [
+    {
+        "templeName": "Aba Nigeria Temple",
+        "country": "Nigeria",
+        "state_region_province": "Abia State",
+        "street": "72-28 Okpu-Umuobo Road.",
+        "announced": "2 April 2000",
+        "groundBreaking": "23 February 2002.",
+        "dedicated": "7 August 2005",
+        "telephone": "(234) 80-39034810"
+    },
+    {
+        "templeName": "Accra Ghana Temple",
+        "country": "Ghana",
+        "state_region_province": "Accra",
+        "street": "75 Independence Ave",
+        "announced": "16 February 1998",
+        "groundBreaking": "16 November 2001.",
+        "dedicated": "11 January 2004",
+        "telephone": "(233) 302-650-123"
+    },
+    {
+        "templeName": "Adelaide Australia Temple",
+        "country": "Australia",
+        "state_region_province": "Adelaide",
+        "street": "53-59 Lower Portush Road",
+        "announced": "7 March 1999",
+        "groundBreaking": "29 May 1999",
+        "dedicated": "15 June",
+        "telephone": "(61) 8-8363-8000"
+    }
+]
+}

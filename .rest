@@ -1,0 +1,68 @@
+//TEMPLES DATABASE --LOCALHOST
+GET http://localhost:8080/temples/
+
+###
+POST http://localhost:8080/temples/
+Content-Type: application/json
+
+ {
+    "templeName": "LOLOOhhh124",
+    "country": "KKD",
+    "state_region_province": "ADF",
+    "street": "OAD",
+    "announced": "AD",
+    "groundBreaking": "ADCEE",
+    "dedicated": "ADAE",
+    "telephone": "AEFED"
+  }
+
+####
+PUT http://localhost:8080/temples/65298e7a51277f290f7c23a7
+Content-Type: application/json
+
+ {
+    "templeName": "i GOT IT",
+    "country": "KKD",
+    "state_region_province": "ADFFFFF",
+    "street": "OAD",
+    "announced": "AD",
+    "groundBreaking": "ADCEE",
+    "dedicated": "ADAE",
+    "telephone": "AEFED"
+  }
+
+
+###
+DELETE http://localhost:8080/temples/65298e7a51277f290f7c23a7
+
+
+
+//WARDS DATA BASE --LOCALHOST
+###
+GET http://localhost:8080/wards/
+
+####
+POST http://localhost:8080/wards/
+Content-Type: application/json
+
+ {
+    "wardName": "Ajah",
+    "address": "Graceland Estate",
+   "bishopName": "Bishop Archibong",
+    "stake": "Zion"
+  }
+
+###
+PUT http://localhost:8080/wards/65298f5251277f290f7c23a9
+Content-Type: application/json
+
+ {
+    "wardName": "AjahpUpdated",
+    "address": "Graceland Estate",
+   "bishopName": "Bishop Archibong",
+    "stake": "Zion"
+  }
+
+
+###
+DELETE http://localhost:8080/wards/65298f5251277f290f7c23a9

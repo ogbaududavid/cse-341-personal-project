@@ -1,0 +1,22 @@
+{
+    "wards" : [
+    {
+        "wardName": "Lekki Ward",
+        "address": "No. 24 Ugochukwu Orji Street, Igbo-Efon, Lekki, Lagos.",
+        "bishopName": "Bishop Ihesiene",
+        "stake": "Lagos Nigeria Yaba Stake"
+    },
+    {
+        "wardName": "Ikoyi Ward",
+        "address": "5 Maitama Sule Street, Ikoyi, Lagos.",
+        "bishopName": "Bishop Nwachukwu",
+        "stake": "Lagos Nigeria Yaba Stake"
+    },
+    {
+        "wardName": "Yaba Ward",
+        "address": "404 Herbert Marcauly Street, Jibowu, Yaba, Lagos.",
+        "bishopName": "Bishop Erubami",
+        "stake": "Lagos Nigeria Yaba Stake"
+    }
+]
+}
