@@ -75,10 +75,10 @@ DELETE http://localhost:8080/wards/65298f5251277f290f7c23a9
 
 //TEMPLES DATABASE RENDER LINKS
 ###
-GET https://temples-and-wards-api.onrender.com/temples/
+GET https://https://temples-wards-api.onrender.com/temples/
 
 ###
-POST https://temples-and-wards-api.onrender.com/temples/
+POST https://https://temples-wards-api.onrender.com/temples/
 Content-Type: application/json
 
  {
@@ -93,7 +93,7 @@ Content-Type: application/json
   }
 
 ####
-PUT https://temples-and-wards-api.onrender.com/temples/65298e7a51277f290f7c23a7
+PUT https://https://temples-wards-api.onrender.com/temples/65298e7a51277f290f7c23a7
 Content-Type: application/json
 
  {
@@ -109,7 +109,7 @@ Content-Type: application/json
 
 
 ###
-DELETE https://temples-and-wards-api.onrender.com/temples/65299597360ce9792c35d466
+DELETE https://https://temples-wards-api.onrender.com/temples/65299597360ce9792c35d466
 
 
 
@@ -117,10 +117,10 @@ DELETE https://temples-and-wards-api.onrender.com/temples/65299597360ce9792c35d4
 
 //WARDS DATA BASE --RENDER LINKS
 ###
-GET https://temples-and-wards-api.onrender.com/wards/
+GET https://https://temples-wards-api.onrender.com/wards/
 
 ####
-POST https://temples-and-wards-api.onrender.com/wards/
+POST https://https://temples-wards-api.onrender.com/wards/
 Content-Type: application/json
 
  {
@@ -131,7 +131,7 @@ Content-Type: application/json
   }
 
 ###
-PUT https://temples-and-wards-api.onrender.com/wards/65299623360ce9792c35d467
+PUT https://https://temples-wards-api.onrender.com/wards/65299623360ce9792c35d467
 Content-Type: application/json
 
  {
@@ -143,4 +143,4 @@ Content-Type: application/json
 
 
 ###
-DELETE https://temples-and-wards-api.onrender.com/wards/65298f5251277f290f7c23a9
+DELETE https://https://temples-wards-api.onrender.com/wards/65298f5251277f290f7c23a9
