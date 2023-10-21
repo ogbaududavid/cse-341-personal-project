@@ -10,30 +10,30 @@ Content-Type: application/json
     "country": "KKD",
     "state_region_province": "ADF",
     "street": "OAD",
-    "announced": "AD",
-    "groundBreaking": "ADCEE",
-    "dedicated": "ADAE",
-    "telephone": "AEFED"
+    "announced": "2012-12-10",
+    "groundBreaking": "2012-12-05",
+    "dedicated": "2012-12-05",
+    "telephone": "9089076"
   }
 
 ####
-PUT http://localhost:8080/temples/65298e7a51277f290f7c23a7
+PUT http://localhost:8080/temples/
 Content-Type: application/json
 
  {
-    "templeName": "i GOT IT",
-    "country": "KKD",
-    "state_region_province": "ADFFFFF",
-    "street": "OAD",
-    "announced": "AD",
-    "groundBreaking": "ADCEE",
-    "dedicated": "ADAE",
-    "telephone": "AEFED"
+    "templeName": "Accra Ghana Temple",
+    "country": "Ghana",
+    "state_region_province": "Accra",
+    "street": "Independence Layout",
+    "announced": "2004-09-04",
+    "groundBreaking": "2004-09-04",
+    "dedicated": "2005-09-04",
+    "telephone": "+233898989998"
   }
 
 
 ###
-DELETE http://localhost:8080/temples/65298e7a51277f290f7c23a7
+DELETE http://localhost:8080/temples/6532ebd090c39065d082478
 
 
 
@@ -65,7 +65,7 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:8080/wards/65298f5251277f290f7c23a9
+DELETE http://localhost:8080/wards/6532ea3190c39065d0824a44
 
 
 
@@ -75,10 +75,10 @@ DELETE http://localhost:8080/wards/65298f5251277f290f7c23a9
 
 //TEMPLES DATABASE RENDER LINKS
 ###
-GET https://https://temples-wards-api.onrender.com/temples/
+GET https://temples-wards-api.onrender.com/temples/
 
 ###
-POST https://https://temples-wards-api.onrender.com/temples/
+POST https://temples-wards-api.onrender.com/temples/
 Content-Type: application/json
 
  {
@@ -93,7 +93,7 @@ Content-Type: application/json
   }
 
 ####
-PUT https://https://temples-wards-api.onrender.com/temples/65298e7a51277f290f7c23a7
+PUT https://temples-wards-api.onrender.com/temples/65298e7a51277f290f7c23a7
 Content-Type: application/json
 
  {
@@ -109,7 +109,7 @@ Content-Type: application/json
 
 
 ###
-DELETE https://https://temples-wards-api.onrender.com/temples/65299597360ce9792c35d466
+DELETE https://temples-wards-api.onrender.com/temples/6529b003f5d4ef2ff437f277
 
 
 
@@ -117,10 +117,10 @@ DELETE https://https://temples-wards-api.onrender.com/temples/65299597360ce9792c
 
 //WARDS DATA BASE --RENDER LINKS
 ###
-GET https://https://temples-wards-api.onrender.com/wards/
+GET https://temples-wards-api.onrender.com/wards/
 
 ####
-POST https://https://temples-wards-api.onrender.com/wards/
+POST https://temples-wards-api.onrender.com/wards/
 Content-Type: application/json
 
  {
@@ -131,7 +131,7 @@ Content-Type: application/json
   }
 
 ###
-PUT https://https://temples-wards-api.onrender.com/wards/65299623360ce9792c35d467
+PUT https://temples-wards-api.onrender.com/wards/65299623360ce9792c35d467
 Content-Type: application/json
 
  {
@@ -143,4 +143,4 @@ Content-Type: application/json
 
 
 ###
-DELETE https://https://temples-wards-api.onrender.com/wards/65298f5251277f290f7c23a9
+DELETE https://temples-wards-api.onrender.com/wards/65299623360ce9792c35d467
