@@ -5,30 +5,30 @@
         "country": "Nigeria",
         "state_region_province": "Abia State",
         "street": "72-28 Okpu-Umuobo Road.",
-        "announced": "2 April 2000",
-        "groundBreaking": "23 February 2002.",
-        "dedicated": "7 August 2005",
-        "telephone": "(234) 80-39034810"
+        "announced": "2000-04-02",
+        "groundBreaking": "2002-02-23",
+        "dedicated": "2005-08-07",
+        "telephone": "+2348039034810"
     },
     {
         "templeName": "Accra Ghana Temple",
         "country": "Ghana",
         "state_region_province": "Accra",
         "street": "75 Independence Ave",
-        "announced": "16 February 1998",
-        "groundBreaking": "16 November 2001.",
-        "dedicated": "11 January 2004",
-        "telephone": "(233) 302-650-123"
+        "announced": "1998-02-16",
+        "groundBreaking": "2001-11-16",
+        "dedicated": "2004-01-11",
+        "telephone": "+233302650123"
     },
     {
         "templeName": "Adelaide Australia Temple",
         "country": "Australia",
         "state_region_province": "Adelaide",
         "street": "53-59 Lower Portush Road",
-        "announced": "7 March 1999",
-        "groundBreaking": "29 May 1999",
-        "dedicated": "15 June",
-        "telephone": "(61) 8-8363-8000"
+        "announced": "1999-03-07",
+        "groundBreaking": "1999-05-29",
+        "dedicated": "2000-06-15",
+        "telephone": "+61883638000"
     }
 ]
 }

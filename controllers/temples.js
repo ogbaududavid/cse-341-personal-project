@@ -1,6 +1,6 @@
 const mongodb = require("../db/connect")
 const ObjectId = require("mongodb").ObjectId
-const {dataSchema, idSchema} = require('../validator/schemas')
+const {templeDataSchema, idSchema} = require('../validator/schemas')
 
 const getAll = async (req, res, next) => {
   const result = await mongodb
@@ -39,7 +39,7 @@ const getSingle = async (req, res, next) => {
 }
 
 const createTemple = async (req, res) => {
-  const validation = await dataSchema.validate(req.body)
+  const validation = await templeDataSchema.validate(req.body)
   const {error} = validation
 
   if(error){
@@ -78,7 +78,7 @@ const createTemple = async (req, res) => {
 
 const updateTemple = async (req, res) => {
   const templeId = new ObjectId(req.params.id);
-  const validation = await dataSchema.validate(req.body)
+  const validation = await templeDataSchema.validate(req.body)
   const {error} = validation
 
   if(error){

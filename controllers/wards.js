@@ -1,5 +1,6 @@
 const mongodb = require("../db/connect")
 const ObjectId = require("mongodb").ObjectId
+const {wardDataSchema} = require('../validator/schemas')
 
 const getAll = async (req, res, next) => {
     const result = await mongodb
@@ -26,13 +27,23 @@ const getSingle = async (req, res, next) => {
   };
 
 const createWard = async (req, res) => {
+  const validation = await wardDataSchema.validate(req.body)
+  const {error} = validation
+ 
+  if(error){
+    const message = error.details.map( x => x.message)
+    res.status(400).json({
+      status: "error",
+      message : "invalid request data",
+      data: message
+    })
+} else {
   const ward = {
     wardName: req.body.wardName,
     address: req.body.address,
     bishopName: req.body.bishopName,
     stake: req.body.stake
   };
-
   const response = await mongodb
   .getDb()
   .db()
@@ -46,7 +57,20 @@ const createWard = async (req, res) => {
   }
 };
 
+
+};
+
 const updateWard = async (req, res) => {
+  const validation = await wardDataSchema.validate(req.body)
+  const {error} = validation
+  if(error){
+    const message = error.details.map( x => x.message)
+    res.status(400).json({
+      status: "error",
+      message : "invalid request data",
+      data: message
+    })
+} else {
   const wardId = new ObjectId(req.params.id);
 
   const ward = {
@@ -66,11 +90,11 @@ const updateWard = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occured while updating the ward.')
   }
+}
 };
 
 
 const deleteWard = async(req, res) => {
-  console.log('im here')
   const wardId = new ObjectId(req.params.id)
   const response = await mongodb
   .getDb()

@@ -1,6 +1,6 @@
 const joi = require('@hapi/joi')
 
-const dataSchema = joi.object({
+const templeDataSchema = joi.object({
     telephone: joi
         .string()
         .min(7)
@@ -32,7 +32,20 @@ const idSchema = joi.object({
     id: joi.string().required()
 })
 
-module.exports = {dataSchema, idSchema}
+const wardDataSchema = joi.object({
+    wardName: joi
+        .string()
+        .min(2)
+        .max(19)
+        .required(),
+    
+    address: joi.string().min(5).required(),
+    bishopName: joi.string().required(),
+    stake: joi.string().required(),
+    
+})
+
+module.exports = {templeDataSchema, wardDataSchema, idSchema}
 
     // schema.validate({telephone: 90989, dedicated: "600/10/1995"})
 
