@@ -102,7 +102,7 @@ const deleteWard = async(req, res) => {
   .collection('wards')
   .deleteMany({_id: wardId}, true);
   if (response.deletedCount > 0) {
-    res.status(204).send();
+    res.status(200).send();
   } else {
     res.status(500).json(response.error || 'Some error occured while deleting the ward.')
   }

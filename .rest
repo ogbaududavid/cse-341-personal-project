@@ -123,24 +123,24 @@ GET https://temples-wards-api.onrender.com/wards/
 POST https://temples-wards-api.onrender.com/wards/
 Content-Type: application/json
 
- {
-  "wardName": "A",
-  "address": "Graceland Estate",
-  "bishopName": "Bishop Archibong",
-  "stake": "Zion"
+  {
+  "wardName": "Ikoyi Ward",
+  "address": "5 Maitama Sule Street, Ikoyi, Lagos.",
+  "bishopName": "Bishop Nwachukwu",
+  "stake": "Lagos Nigeria Yaba Stake"
   }
 
 ###
-PUT https://temples-wards-api.onrender.com/wards/65299623360ce9792c35d467
+PUT https://temples-wards-api.onrender.com/wards/653594ca8c813e2407c9c3a2
 Content-Type: application/json
 
  {
-  "wardName": "AjahpUpdated",
-  "address": "Graceland Estate",
-  "bishopName": "Bishop Archibong",
-  "stake": "Zion"
+  "wardName": "I",
+  "address": "5 Maitama Sule Street, Ikoyi, Lagos.",
+  "bishopName": "Bishop Nwachukwu",
+  "stake": "Lagos Nigeria Yaba Stake"
   }
 
 
 ###
-DELETE https://temples-wards-api.onrender.com/wards/6535934d9d37a1bcd134b11b
+DELETE https://temples-wards-api.onrender.com/wards/6535979c4e5a069f561c16f7
