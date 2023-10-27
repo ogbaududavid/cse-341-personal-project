@@ -1,6 +1,5 @@
 const mongodb = require("../db/connect")
 const ObjectId = require("mongodb").ObjectId
-const {templeDataSchema, idSchema} = require('../validator/schemas')
 
 const SignIn = async (req, res, next) => {
     const result = await mongodb
@@ -14,7 +13,7 @@ const SignIn = async (req, res, next) => {
     });
   };
 
-  const SignInWith = async (req, res, next) => {
+  const SignInWithOauth = async (req, res, next) => {
     const result = await mongodb
         .getDb()
         .db()
@@ -25,3 +24,5 @@ const SignIn = async (req, res, next) => {
         res.status(200).json(lists)
     });
   };
+
+  module.exports = { SignIn, SignInWithOauth}
