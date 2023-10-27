@@ -46,14 +46,3 @@ const wardDataSchema = joi.object({
 })
 
 module.exports = {templeDataSchema, wardDataSchema, idSchema}
-
-    // schema.validate({telephone: 90989, dedicated: "600/10/1995"})
-
-    // schema.validate({})
-
-    // try {
-    //     const value = await schema.validateAsync({telephone: 90989, dedicated: "600/10/1995"})
-    // }
-    // catch (err) {
-    //     console.log(err)
-    // }

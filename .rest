@@ -93,23 +93,23 @@ Content-Type: application/json
   }
 
 ####
-PUT https://temples-wards-api.onrender.com/temples/65358b3e9d37a1bcd134b118
+PUT https://temples-wards-api.onrender.com/temples/6535bf7d3579c199b9bd451c
 Content-Type: application/json
 
- {
-    "templeName": "Aba Nigeria Temple",
-    "country": "Nigeria",
-    "state_region_province": "Abia State",
-    "street": "72-28 Okpu-Umuobo Road.",
-    "announced": "2000-04-02",
-    "groundBreaking": "2002-02-23",
-    "dedicated": "2005-08-007",
-    "telephone": "+2348039034810"
+{
+    "templeName": "Accra Ghana Temple",
+    "country": "Ghana",
+    "state_region_province": "Accra",
+    "street": "75 Independence Ave",
+    "announced": "1998-02-16",
+    "groundBreaking": "2001-11-06",
+    "dedicated": "2004-01-11",
+    "telephone": "+233302650123"
   }
 
 
 ###
-DELETE https://temples-wards-api.onrender.com/temples/65358dae9d37a1bcd134b119
+DELETE https://temples-wards-api.onrender.com/temples/65358b3e9d37a1bcd134b118
 
 
 
@@ -124,9 +124,9 @@ POST https://temples-wards-api.onrender.com/wards/
 Content-Type: application/json
 
   {
-  "wardName": "Ikoyi Ward",
-  "address": "5 Maitama Sule Street, Ikoyi, Lagos.",
-  "bishopName": "Bishop Nwachukwu",
+  "wardName": "Yaba Ward",
+  "address": "404 Herbert Marcauly Street, Jibowu, Yaba, Lagos.",
+  "bishopName": "Bishop Erubami",
   "stake": "Lagos Nigeria Yaba Stake"
   }
 
@@ -135,7 +135,7 @@ PUT https://temples-wards-api.onrender.com/wards/653594ca8c813e2407c9c3a2
 Content-Type: application/json
 
  {
-  "wardName": "I",
+  "wardName": "Ikoyi Ward",
   "address": "5 Maitama Sule Street, Ikoyi, Lagos.",
   "bishopName": "Bishop Nwachukwu",
   "stake": "Lagos Nigeria Yaba Stake"
@@ -143,4 +143,4 @@ Content-Type: application/json
 
 
 ###
-DELETE https://temples-wards-api.onrender.com/wards/6535979c4e5a069f561c16f7
+DELETE https://temples-wards-api.onrender.com/wards/653594ca8c813e2407c9c3a2
