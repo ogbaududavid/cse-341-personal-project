@@ -32,4 +32,4 @@ const Oauth = async (req, res, next) => {
 //     })
 // }
 
-module.exports = {Oauth, handleCallback}
+module.exports = {Oauth}
