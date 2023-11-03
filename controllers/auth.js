@@ -20,7 +20,7 @@ const handleCallback = async ( {query : {code}}, res) => {
         code
     }
     routes.post(`https://github/login/oauth/access_token?client_id=${client_id}&client_secret=${client_secret}`, body, {headers: {accept: 'application/json'}})
-    .then((_res) => _res.data.access.token)
+    .then((_res) => _res.data.access_token)
     .then((token) => {
         console.log('My token: ', token)
         res.redirect(`/?token=${token}`)
