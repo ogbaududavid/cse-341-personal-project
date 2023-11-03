@@ -23,7 +23,7 @@ const handleCallback = async ( {query : {code}}, res) => {
     .then((_res) => _res.data.access_token)
     .then((token) => {
         console.log('My token: ', token)
-        res.redirect(`/?token=${token}`)
+        // res.redirect(`/?token=${token}`)
     })
 }
 
