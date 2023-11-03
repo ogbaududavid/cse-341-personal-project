@@ -33,7 +33,7 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:8080/temples/6532ebd090c39065d082478
+DELETE http://localhost:8080/temples/6544d2d0526b72d09b078c57
 
 
 
@@ -93,7 +93,7 @@ Content-Type: application/json
   }
 
 ####
-PUT https://temples-wards-api.onrender.com/temples/6535bf7d3579c199b9bd451c
+PUT https://temples-wards-api.onrender.com/temples/6544d3306cf63fc6908610cd
 Content-Type: application/json
 
 {
@@ -109,7 +109,7 @@ Content-Type: application/json
 
 
 ###
-DELETE https://temples-wards-api.onrender.com/temples/65358b3e9d37a1bcd134b118
+DELETE https://temples-wards-api.onrender.com/temples/6544d3306cf63fc6908610cd
 
 
 
