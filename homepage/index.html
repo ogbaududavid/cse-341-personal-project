@@ -10,7 +10,8 @@
         <div style="  display: flex;
         flex-direction: column;
         gap: 20px;
-        margin-top: 10%;">
+        margin-top: 10%;"
+        class="unauthorized">
             <form method="GET" action="https://temples-wards-api.onrender.com/auth" >
                 <fieldset  style=" background-color: aliceblue;
                 display: flex;
@@ -84,7 +85,7 @@
 
     if(code) {
         show('.authorized')
-        hide('.authorized')
+        hide('.unauthorized')
     }
    </script>
     
