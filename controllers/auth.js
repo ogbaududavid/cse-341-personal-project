@@ -19,7 +19,7 @@ const handleCallback = async ( {query : {code}}, res) => {
     const body = {
         client_id: client_id,
         client_secret: client_secret,
-        code
+        query
     }
     // routes.post('https://github/login/oauth/access_token', body, {headers: {accept: 'application/json'}})
     // .then((_res) => _res.data.access_token)
@@ -29,8 +29,8 @@ const handleCallback = async ( {query : {code}}, res) => {
 
     //     res.redirect(`/?token=${token}`)
     // })
-    routes.post(`https://github/login/oauth/access_token?client_id=${body.client_id}&client_secret=${body.client_secret}&code=${body.code}`, {headers: {accept: 'application/json'}})
-    .then((_res) => _res.data.access_token)
+    routes.post(`https://github/login/oauth/access_token?client_id=${body.client_id}&client_secret=${body.client_secret}&code=${body.query}`, {headers: {accept: 'application/json'}})
+    .then((_res) => _res.access_token)
     .then((token) => {
         //eslint-disable-next-line no-console
         console.log('My token: ', token)
