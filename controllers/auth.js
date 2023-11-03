@@ -21,11 +21,13 @@ const handleCallback = async ( {query : {code}}, res) => {
         client_secret: client_secret,
         code
     }
-    routes.post(`https://github/login/oauth/access_token`, body, {headers: {accept: 'application/json'}})
+    routes.post('https://github/login/oauth/access_token', body, {headers: {accept: 'application/json'}})
     .then((_res) => _res.data.access_token)
     .then((token) => {
+        //eslint-disable-next-line no-console
         console.log('My token: ', token)
-        // res.redirect(`/?token=${token}`)
+
+        res.redirect(`/?token=${token}`)
     })
 }
 
