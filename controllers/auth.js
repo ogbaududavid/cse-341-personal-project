@@ -21,7 +21,15 @@ const handleCallback = async ( {query : {code}}, res) => {
         client_secret: client_secret,
         code
     }
-    routes.post('https://github/login/oauth/access_token', body, {headers: {accept: 'application/json'}})
+    // routes.post('https://github/login/oauth/access_token', body, {headers: {accept: 'application/json'}})
+    // .then((_res) => _res.data.access_token)
+    // .then((token) => {
+    //     //eslint-disable-next-line no-console
+    //     console.log('My token: ', token)
+
+    //     res.redirect(`/?token=${token}`)
+    // })
+    routes.post(`https://github/login/oauth/access_token?client_id=${body.client_id}&client_secret=${body.client_secret}&code=${body.code}`, {headers: {accept: 'application/json'}})
     .then((_res) => _res.data.access_token)
     .then((token) => {
         //eslint-disable-next-line no-console
