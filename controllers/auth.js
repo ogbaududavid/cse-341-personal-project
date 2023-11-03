@@ -1,8 +1,11 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-const client_id = process.env.OUTH_CLIENT_ID
-const client_secret = process.env.OUTH_CLIENT_SECRET
+// const client_id = process.env.OUTH_CLIENT_ID
+// const client_secret = process.env.OUTH_CLIENT_SECRET
+const client_id = "e58be3ad5edbe4b89857"
+const client_secret = "64461404b9d57c2f9c6bad2ad6b9d3cc7347d8a4"
+
 
 const Oauth = async (req, res, next) => {
     res.redirect(
