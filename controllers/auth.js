@@ -15,11 +15,11 @@ const Oauth = async (req, res, next) => {
     )
 };
 
-const handleCallback = async ( {query : {code}}, res) => {
+const handleCallback = ( {query : {code}}, res) => {
     const body = {
         client_id: client_id,
         client_secret: client_secret,
-        query
+        code
     }
     // routes.post('https://github/login/oauth/access_token', body, {headers: {accept: 'application/json'}})
     // .then((_res) => _res.data.access_token)
@@ -29,7 +29,7 @@ const handleCallback = async ( {query : {code}}, res) => {
 
     //     res.redirect(`/?token=${token}`)
     // })
-    res.redirect(`https://github/login/oauth/access_token?client_id=${body.client_id}&client_secret=${body.client_secret}&code=${body.query}`, {headers: {accept: 'application/json'}})
+    res.post(`https://github/login/oauth/access_token?client_id=${body.client_id}&client_secret=${body.client_secret}&code=${body.code}`, {headers: {accept: 'application/json'}})
     .then((_res) => _res.access_token)
     .then((token) => {
         //eslint-disable-next-line no-console
