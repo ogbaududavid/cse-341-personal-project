@@ -16,6 +16,7 @@ const Oauth = async (req, res, next) => {
 };
 
 const handleCallback = ( {query : {code}}, res) => {
+    console.log(res, code)
     const body = {
         client_id: client_id,
         client_secret: client_secret,
