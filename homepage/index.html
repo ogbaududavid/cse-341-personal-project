@@ -83,17 +83,8 @@
     }
 
     if(code) {
-        hide('.authorized')
-        hide('.unauthorized')
-        const express = require('express');
-        const routesB = express.Router()
-        routesB.get("/oauth-callback", (req, res) => {
-            res.redirect(`https://temples-wards-api.onrender.com/?code=${code}`)
-        })
-    }else if(token){
         show('.authorized')
         hide('.unauthorized')
-        
     }else{
         show('.unauthorized')
         hide('.authorized')
