@@ -19,14 +19,10 @@ const handleCallback = ( {query : {code}}, res) => {
     }
     const opts = {headers: {accept: "application/json"}}
 
-    res.post('https://github/login/oauth/access_token', body, opts)
-    .then((_res) => _res.data.access_token)
-    .then((token) => {
+    res.post(`https://github/login/oauth/access_token?client_id=${body.client_id}&client_secret=${body.client_secret}&code=${body.code}`, opts)
+    .then((_res) => access_token = _res.data.access_token)
         //eslint-disable-next-line no-console
-        console.log('My token: ', token)
-
-        res.redirect(`/?token=${token}`)
-    })
+        console.log('My token: ', access_token)
 }
 
 module.exports = {Oauth, handleCallback}
