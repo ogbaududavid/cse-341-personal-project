@@ -24,9 +24,10 @@ const handleCallback = ( {query : {code}}, res) => {
     .then((token) => {
         //eslint-disable-next-line no-console
         console.log('My token: ', token)
-
-        res.redirect(`/?token=${token}`)
+        res.sendFile( `index.html?token=${token}`, {root: "./homepage"})
+        // res.sendFile(`/?token=${token}`)
     })
 }
+
 
 module.exports = {Oauth, handleCallback}
