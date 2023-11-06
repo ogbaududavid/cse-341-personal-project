@@ -12,7 +12,8 @@ const Oauth = async (req, res, next) => {
 };
 
 const handleCallback = ( req, res) => {
-   console.log(res.query.code)
+   const code = req.query.code
+   console.log(code)
     // const code = req.query.code
     // const opts = {headers: {accept: "application/json"}}
 
