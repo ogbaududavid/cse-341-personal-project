@@ -1,5 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.config();
+const express = require('express');
+const routes = express.Router()
 
 const client_id = process.env.OUTH_CLIENT_ID
 const client_secret = process.env.OUTH_CLIENT_SECRET
@@ -15,7 +17,7 @@ const handleCallback = ( req, res) => {
    const code = req.query.code
    const opts = {headers: {accept: "application/json"}}
 
-    post(`https://github/login/oauth/access_token?client_id=${client_id}&client_secret=${client_secret}&code=${code}`, opts)
+    routes.post(`https://github/login/oauth/access_token?client_id=${client_id}&client_secret=${client_secret}&code=${code}`, opts)
     .then((_res) => access_token = _res.data.access_token)
         console.log('My token: ', access_token)
         // res.redirect('/success')
