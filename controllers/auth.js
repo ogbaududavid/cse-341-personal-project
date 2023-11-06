@@ -13,14 +13,12 @@ const Oauth = async (req, res, next) => {
 
 const handleCallback = ( req, res) => {
    const code = req.query.code
-   console.log(code)
-    // const code = req.query.code
-    // const opts = {headers: {accept: "application/json"}}
+   const opts = {headers: {accept: "application/json"}}
 
-    // // res.post(`https://github/login/oauth/access_token?client_id=${client_id}&client_secret=${client_secret}&code=${code}`, opts)
-    // // .then((_res) => access_token = _res.data.access_token)
-    // //     console.log('My token: ', access_token)
-    // //     res.redirect('/success')
+    post(`https://github/login/oauth/access_token?client_id=${client_id}&client_secret=${client_secret}&code=${code}`, opts)
+    .then((_res) => access_token = _res.data.access_token)
+        console.log('My token: ', access_token)
+        // res.redirect('/success')
 }
 
 const handleSuccess = (req, res) => {
