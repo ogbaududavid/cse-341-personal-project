@@ -15,7 +15,7 @@ const handleCallback = ( {query : {code}}, res) => {
     const body = {
         client_id: client_id,
         client_secret: client_secret,
-        code
+        code: code
     }
     const opts = {headers: {accept: "application/json"}}
 
@@ -24,10 +24,9 @@ const handleCallback = ( {query : {code}}, res) => {
     .then((token) => {
         //eslint-disable-next-line no-console
         console.log('My token: ', token)
-        res.sendFile( `index.html?token=${token}`, {root: "./homepage"})
-        // res.sendFile(`/?token=${token}`)
+
+        res.redirect(`/?token=${token}`)
     })
 }
-
 
 module.exports = {Oauth, handleCallback}
