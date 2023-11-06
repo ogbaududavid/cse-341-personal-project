@@ -11,18 +11,21 @@ const Oauth = async (req, res, next) => {
     )
 };
 
-const handleCallback = ( {query : {code}}, res) => {
-    const body = {
-        client_id: client_id,
-        client_secret: client_secret,
-        code: code
-    }
+const handleCallback = ( req, res) => {
+   
+    const code = req.query.code
     const opts = {headers: {accept: "application/json"}}
 
-    res.post(`https://github/login/oauth/access_token?client_id=${body.client_id}&client_secret=${body.client_secret}&code=${body.code}`, opts)
+    res.post(`https://github/login/oauth/access_token?client_id=${client_id}&client_secret=${client_secret}&code=${code}`, opts)
     .then((_res) => access_token = _res.data.access_token)
-        //eslint-disable-next-line no-console
         console.log('My token: ', access_token)
+        res.redirect('/success')
 }
 
-module.exports = {Oauth, handleCallback}
+const handleSuccess = (req, res) => {
+    const opts = {headers: {Authorization: 'token ' + access_token}}
+    res.get(`https://api.github.com/user`, opts )
+    console.log(response.data)
+}
+
+module.exports = {Oauth, handleCallback, handleSuccess}
