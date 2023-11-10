@@ -5,5 +5,5 @@ const authController = require("../controllers/auth")
 
 
 routes.get('/', authController.Oauth)
-routes.get('/oauth-callback', authController.handleCallback )
+routes.get('/callback', authController.handleCallback )
 module.exports = routes; 

@@ -1,7 +1,6 @@
 const dotenv = require("dotenv");
-dotenv.config();
-const express = require('express');
-const routes = express.Router()
+const axios = require('axios')
+const router= require('express').Router()
 
 const client_id = process.env.OUTH_CLIENT_ID
 const client_secret = process.env.OUTH_CLIENT_SECRET
@@ -13,20 +12,30 @@ const Oauth = async (req, res, next) => {
     )
 };
 
-const handleCallback = ( req, res) => {
-   const code = req.query.code
-   const opts = {headers: {accept: "application/json"}}
+const handleCallback = ( {query : {code}}, res) => {
+    
+    const body = {
+        client_id: client_id,
+        client_secret: client_secret,
+        code
+    }
+    const opts = {headers: {accept: "application/json"}}
 
-    routes.post(`https://github/login/oauth/access_token?client_id=${client_id}&client_secret=${client_secret}&code=${code}`, opts)
-    .then((_res) => access_token = _res.data.access_token)
-        console.log('My token: ', access_token)
-        // res.redirect('/success')
+    axios.post(`https://github.com/login/oauth/access_token`, body, opts)
+    .then((_res) => _res.data.access_token)
+    .then((token) => {
+        let userData;
+        axios.get(`https://api.github.com/user`, {headers:`Authorization: token ${token}`})
+        .then((res) =>
+            {
+               userData = res.data
+               res.redirect(`https://temples-wards-api.onrender.com/?token=${userData.login}`)
+
+            })
+
+        
+    })
+    .catch((err) => res.status(500).json({err: err.message}))
 }
 
-const handleSuccess = (req, res) => {
-    const opts = {headers: {Authorization: 'token ' + access_token}}
-    res.get(`https://api.github.com/user`, opts )
-    console.log(response.data)
-}
-
-module.exports = {Oauth, handleCallback, handleSuccess}
+module.exports = {Oauth, handleCallback}

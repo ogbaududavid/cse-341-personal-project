@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-   <main>
+    <main>
         <div style="  display: flex;
         flex-direction: column;
         gap: 20px;
         margin-top: 10%;">
-            <form method="GET" action="https://temples-wards-api.onrender.com/auth" class="unauthorized">
+            <form method="GET" action="http://localhost:8080/auth" class="unauthorized">
                 <fieldset  style=" background-color: aliceblue;
                 display: flex;
                 flex-direction: column;
@@ -39,7 +40,6 @@
 
                 </fieldset>  
             </form> 
-            <form method="GET" action="https://temples-wards-api.onrender.com/api-docs" >
             <div class="authorized">
                 <fieldset  style=" background-color: aliceblue;
                 display: flex;
@@ -56,23 +56,14 @@
                     width: 100px;
                     border-color: white;
                     border-radius: 50px;"/> 
-                    <input style="width: 250px;
-                    background-color: rgb(41, 100, 143);
-                    color: white;
-                    font-size: 20px;
-                    border-width: 1px;
-                    font-weight: 900;
-                    border-radius: 10px;
-                    padding: 10px;
-                    text-align: center" type="submit" value="Start Exploring">
+                    <li style="list-style: none;" class="buttonLink"></li>  
                 </fieldset> 
-            </div>      
-            </form>             
+            </div>            
         </div>
-   </main>
-   <script>
+    </main>
+    <script>
     const URL_PARAMS = new URLSearchParams(window.location.search)
-    const code = URL_PARAMS.get('code');
+    const token = URL_PARAMS.get('token');
 
     const show = (selector) => {
         document.querySelector(selector).style.display = "block";
@@ -82,14 +73,40 @@
         document.querySelector(selector).style.display = "none"
     }
 
-    if(code) {
+    if(token) {
+        
         show('.authorized')
         hide('.unauthorized')
+
+        var styles = {
+            width: '250px',
+            backgroundColor: 'rgb(41, 100, 143)',
+            color: 'white',
+            fontSize: '20px',
+            borderWidth: '1px',
+            fontWeight: '900',
+            borderRadius: '10px',
+            padding: '10px',
+            textAlign: 'center',
+            textDecoration: 'none',
+            paddingLeft: '30px',
+            paddingRight: '30px',
+            
+        }
+        let a = document.createElement('a')
+        let text = document.createElement('p').value = "Explore"
+        let button = document.querySelector('.buttonLink')
+        a.href = `http://localhost:8080/api-docs/?token=${token}`
+        a.append(text)
+        Object.assign(a.style, styles)
+        button.append(a)
+        
+        
     }else{
         show('.unauthorized')
         hide('.authorized')
     }
-   </script>
+    </script>
     
 </body>
 </html>
