@@ -9,7 +9,7 @@
   "basePath": "/",
   "schemes": "https",
   "paths": {
-    "/api-docs": {
+    "/swagger-doc/api-docs": {
       "get": {
         "description": "",
         "responses": {
@@ -316,7 +316,7 @@
         }
       }
     },
-    "/auth/oauth-callback": {
+    "/auth/callback": {
       "get": {
         "description": "",
         "responses": {
