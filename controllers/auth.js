@@ -29,7 +29,7 @@ const handleCallback = ( {query : {code}}, res) => {
             {
                userData = res.data
             })
-        res.redirect(`/?token=${token}`)
+        res.redirect(`/`)
 
         
     })
