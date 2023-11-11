@@ -29,7 +29,10 @@ const handleCallback = ( {query : {code}}, res) => {
             {
                userData = res.data
             })
-        res.redirect(`https://temples-wards-api.onrender.com/?token${token}`)
+            routes.use('/authorized', (req, res) => {
+                res.sendFile("index.html", {root: "./homepage"})
+            })
+        // res.redirect(`/?token=${token}`)
 
         
     })
