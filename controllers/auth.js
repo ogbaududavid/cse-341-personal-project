@@ -31,7 +31,7 @@ const handleCallback = ( {query : {code}}, res) => {
                userData = res.data
                console.log(userData)
             })
-        res.redirect(`/?token=${token}`)
+        res.redirect(`/`)
 
         
     })
