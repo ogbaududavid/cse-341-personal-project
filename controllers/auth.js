@@ -29,7 +29,7 @@ const handleCallback = ( {query : {code}}, res) => {
             {
                userData = res.data
             })
-            routes.use('/authorized', (req, res) => {
+            router.use('/authorized', (req, res) => {
                 res.sendFile("index.html", {root: "./homepage"})
             })
         // res.redirect(`/?token=${token}`)
