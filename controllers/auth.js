@@ -29,8 +29,9 @@ const handleCallback = ( {query : {code}}, res) => {
         .then((res) =>
             {
                userData = res.data
+               console.log(userData)
             })
-        res.redirect(`https://temples-wards-api.onrender.com/?token=${token}`)
+        res.redirect(`/?token=${token}`)
 
         
     })
