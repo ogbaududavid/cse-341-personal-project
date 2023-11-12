@@ -8,9 +8,5 @@ routes.use('/auth', require('./auth'))
 routes.use('/', (req, res) => {
     res.sendFile("index.html", {root: "./homepage"})
 })
-routes.use('/temples/home', (req, res) => {
-    res.sendFile("index.html", {root: "./homepage"})
-})
-
 
 module.exports = routes

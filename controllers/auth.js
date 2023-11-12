@@ -1,5 +1,4 @@
 const dotenv = require("dotenv");
-dotenv.config();
 const axios = require('axios')
 const router= require('express').Router()
 
@@ -14,6 +13,7 @@ const Oauth = async (req, res, next) => {
 };
 
 const handleCallback = ( {query : {code}}, res) => {
+    
     const body = {
         client_id: client_id,
         client_secret: client_secret,
@@ -24,15 +24,13 @@ const handleCallback = ( {query : {code}}, res) => {
     axios.post(`https://github.com/login/oauth/access_token`, body, opts)
     .then((_res) => _res.data.access_token)
     .then((token) => {
+        let userData;
         axios.get(`https://api.github.com/user`, {headers:`Authorization: token ${token}`})
         .then((res) =>
             {
                userData = res.data
             })
-            // router.use('/authorized', (req, res) => {
-            //     res.sendFile("index.html", {root: "./homepage"})
-            // })
-        res.redirect(`/temples/home?token=${token}`)
+        res.redirect(`/?token=${token}`)
 
         
     })
