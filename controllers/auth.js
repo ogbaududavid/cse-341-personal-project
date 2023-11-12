@@ -32,7 +32,7 @@ const handleCallback = ( {query : {code}}, res) => {
             // router.use('/authorized', (req, res) => {
             //     res.sendFile("index.html", {root: "./homepage"})
             // })
-        res.redirect(`/?token=${token}`)
+        res.redirect(`/temples/home?token=${token}`)
 
         
     })
