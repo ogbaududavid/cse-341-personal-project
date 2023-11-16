@@ -17,7 +17,7 @@ app
   })
   .use("/", require("./routes/index"));
 
-mongodb.connectDB ((err) => {
+mongodb.connectDB((err) => {
   if(err) {
     console.log(err)
   } else {
