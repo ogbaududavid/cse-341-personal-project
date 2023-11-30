@@ -31,12 +31,15 @@ const handleCallback = ( {query : {code}}, res) => {
             {
                userData = res.data
             })
-        if(tokem){
+        if(token){
             res.redirect(`https://temples-wards-api.onrender.com/?token=${token}`)
+            validated = true
         } else {
             res.redirect(`https://temples-wards-api.onrender.com`)
 
         }
+        console.log(userData)
+        console.log(validated)
 
         
     })
