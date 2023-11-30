@@ -4,6 +4,7 @@ const axios = require('axios')
 
 const client_id = process.env.OUTH_CLIENT_ID
 const client_secret = process.env.OUTH_CLIENT_SECRET
+const validated = false
 
 
 const Oauth = async (req, res, next) => {
@@ -30,7 +31,12 @@ const handleCallback = ( {query : {code}}, res) => {
             {
                userData = res.data
             })
-        res.redirect(`https://temples-wards-api.onrender.com/?token=${token}`)
+        if(tokem){
+            res.redirect(`https://temples-wards-api.onrender.com/?token=${token}`)
+        } else {
+            res.redirect(`https://temples-wards-api.onrender.com`)
+
+        }
 
         
     })
