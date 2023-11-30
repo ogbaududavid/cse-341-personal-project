@@ -1,7 +1,6 @@
 const dotenv = require("dotenv");
 dotenv.config();
 const axios = require('axios')
-const router= require('express').Router()
 
 const client_id = process.env.OUTH_CLIENT_ID
 const client_secret = process.env.OUTH_CLIENT_SECRET
