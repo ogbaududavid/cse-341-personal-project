@@ -37,13 +37,9 @@ const handleCallback = ( {query : {code}}, res) => {
         } else {
             res.redirect(`https://temples-wards-api.onrender.com`)
 
-        }
-        console.log(userData)
-        console.log(validated)
-
-        
+        }        
     })
     .catch((err) => res.status(500).json({err: err.message}))
 }
 
-module.exports = {Oauth, handleCallback}
+module.exports = {Oauth, handleCallback, validated}

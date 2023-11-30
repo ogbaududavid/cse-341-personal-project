@@ -2,7 +2,11 @@ const mongodb = require("../db/connect")
 const ObjectId = require("mongodb").ObjectId
 const {templeDataSchema, idSchema} = require('../validator/schemas')
 
+const authController = require("../controllers/auth")
+
+
 const getAll = async (req, res, next) => {
+  if(authController.validated){
   const result = await mongodb
       .getDb()
       .db()
@@ -12,6 +16,9 @@ const getAll = async (req, res, next) => {
       res.setHeader("Content-Type", "application/json");
       res.status(200).json(lists)
   });
+  } else {
+    alert("You have not been validated")
+  }
 };
 
 const getSingle = async (req, res, next) => {
