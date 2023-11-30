@@ -17,7 +17,12 @@ const getAll = async (req, res, next) => {
       res.status(200).json(lists)
   });
   } else {
-    alert("You have not been validated")
+
+    res.status(400).json({
+          status: "Un-authorized user",
+          message : "Sign in to use the API",
+          data: message
+        })
   }
 };
 
