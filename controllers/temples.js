@@ -2,11 +2,7 @@ const mongodb = require("../db/connect")
 const ObjectId = require("mongodb").ObjectId
 const {templeDataSchema, idSchema} = require('../validator/schemas')
 
-const authController = require("../controllers/auth")
-
-
 const getAll = async (req, res, next) => {
-  if(authController.validated){
   const result = await mongodb
       .getDb()
       .db()
@@ -16,14 +12,6 @@ const getAll = async (req, res, next) => {
       res.setHeader("Content-Type", "application/json");
       res.status(200).json(lists)
   });
-  } else {
-
-    res.status(400).json({
-          status: "Un-authorized user",
-          message : "Sign in to use the API",
-          data: message
-        })
-  }
 };
 
 const getSingle = async (req, res, next) => {
